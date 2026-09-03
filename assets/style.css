@@ -189,6 +189,8 @@ ol.pubs li:last-child{border-bottom:0}
 .figures{display:grid;gap:1.5rem;margin:1.5rem 0 1.25rem}
 .figures.devices{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .figures.diagrams{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.figures.single{grid-template-columns:1fr;max-width:920px}
+.figures.single .fig a{padding:.75rem}
 .fig{margin:0}
 .fig a{
   display:block;background:#fff;border:1px solid var(--line);border-radius:6px;padding:1rem;
