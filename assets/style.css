@@ -87,6 +87,8 @@ section{margin-bottom:1rem}
 .page-head h1{margin-bottom:.35rem}
 .page-head p{color:var(--muted);max-width:60ch;margin-bottom:0;font-size:1.05rem}
 
+.meta-line{color:var(--muted);font-size:.98rem;margin-top:-.35rem}
+
 /* --- Home hero ----------------------------------------------------------- */
 .hero{background:var(--sand);border-bottom:1px solid var(--line);padding:3.25rem 0 3rem}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:2.5rem 3rem;align-items:center}
