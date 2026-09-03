@@ -16,7 +16,7 @@ Live at <https://slpmfsafi.github.io/>
 | `students.html` | Links to students' own portfolio pages |
 | `consulting.html` | Consulting and clinical services |
 | `photos.html` | Lab and academic photo gallery |
-| `photos/` | Web-sized images used by the gallery |
+| `photos/` | Web-sized images used by the gallery, plus the lab video and its poster frame |
 | `contact.html` | Email addresses, profiles, CV download |
 | `assets/style.css` | The single stylesheet shared by every page |
 | `assets/headshot.jpg` | Optimized photo used on the site |

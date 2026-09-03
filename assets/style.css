@@ -184,6 +184,32 @@ ol.pubs li:last-child{border-bottom:0}
 .shot figcaption{font-size:.93rem;color:var(--muted);line-height:1.5;margin-top:.65rem}
 @media (max-width:620px){ .shot img{height:190px} }
 
+
+/* --- Research figures ---------------------------------------------------- */
+.figures{display:grid;gap:1.5rem;margin:1.5rem 0 1.25rem}
+.figures.devices{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.figures.diagrams{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.fig{margin:0}
+.fig a{
+  display:block;background:#fff;border:1px solid var(--line);border-radius:6px;padding:1rem;
+  line-height:0;transition:border-color .18s ease, box-shadow .18s ease;
+}
+.fig a:hover,.fig a:focus{border-color:var(--accent-bright);box-shadow:0 4px 18px rgba(16,36,63,.13)}
+.fig img{width:100%;height:auto;display:block}
+.figures.devices .fig img{height:220px;object-fit:contain}
+.fig figcaption{font-size:.92rem;color:var(--muted);line-height:1.5;margin-top:.65rem}
+.fig figcaption strong{color:var(--navy)}
+.fig-credit{font-size:.82rem;color:var(--muted);margin:0 0 2.25rem}
+
+
+/* --- Video --------------------------------------------------------------- */
+.video-wrap{max-width:848px;margin:1.5rem 0 .75rem}
+.video-wrap video{
+  width:100%;height:auto;aspect-ratio:848/480;display:block;background:#000;
+  border:1px solid var(--line);border-radius:6px;
+}
+.video-note{font-size:.9rem;color:var(--muted);margin:0 0 2.5rem}
+
 /* --- Callout ------------------------------------------------------------- */
 .callout{
   background:var(--sand);border-left:4px solid var(--accent-bright);
