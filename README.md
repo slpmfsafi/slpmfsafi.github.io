@@ -13,6 +13,7 @@ Live at <https://slpmfsafi.github.io/>
 | `about.html` | Biography, education, positions, licensure, awards |
 | `research.html` | Research interests, funding, and the full publication list |
 | `teaching.html` | Courses taught, supervision, teaching awards |
+| `students.html` | Links to students' own portfolio pages |
 | `consulting.html` | Consulting and clinical services |
 | `photos.html` | Lab and academic photo gallery |
 | `photos/` | Web-sized images used by the gallery |
