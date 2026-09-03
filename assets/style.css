@@ -1,0 +1,234 @@
+/* ==========================================================================
+   Dr. Mohammed F. Safi — shared stylesheet
+   Plain CSS. No frameworks, no build step.
+   ========================================================================== */
+
+:root{
+  --navy:#10243F;
+  --navy-soft:#1B3A61;
+  --ink:#23303C;
+  --muted:#55616E;
+  --cream:#FBF9F6;
+  --sand:#F2ECE3;
+  --line:#E3D9CB;
+  --accent:#7C5230;
+  --accent-bright:#9C6B3F;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype","Book Antiqua","Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --wrap:1080px;
+  --narrow:760px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:1.0625rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* --- Skip link (accessibility) ------------------------------------------ */
+.skip-link{
+  position:absolute;left:-9999px;top:0;
+  background:var(--navy);color:#fff;padding:.75rem 1.25rem;z-index:100;
+  text-decoration:none;border-radius:0 0 4px 0;
+}
+.skip-link:focus{left:0}
+
+/* --- Typography ---------------------------------------------------------- */
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);line-height:1.25;font-weight:600;margin:0 0 .5em}
+h1{font-size:clamp(1.9rem,4.6vw,2.85rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.4rem,3vw,1.85rem);margin-top:2.75rem}
+h3{font-size:1.15rem;margin-top:2rem;color:var(--navy-soft)}
+h4{font-size:1rem;margin-top:1.5rem;font-family:var(--sans);text-transform:uppercase;
+   letter-spacing:.08em;color:var(--muted);font-weight:700}
+p{margin:0 0 1.1rem}
+a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;
+  text-decoration-thickness:1px;text-decoration-color:rgba(124,82,48,.4)}
+a:hover,a:focus{color:var(--navy);text-decoration-color:currentColor}
+:focus-visible{outline:3px solid var(--accent-bright);outline-offset:2px;border-radius:2px}
+strong{font-weight:700;color:var(--navy)}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+
+/* --- Layout -------------------------------------------------------------- */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:var(--narrow)}
+main{padding-bottom:4rem}
+section{margin-bottom:1rem}
+
+/* --- Header & navigation ------------------------------------------------- */
+.site-header{background:var(--navy);color:#fff;border-bottom:3px solid var(--accent-bright)}
+.site-header a{color:#fff}
+.header-inner{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:.75rem 2rem;padding-top:1rem;padding-bottom:1rem;
+}
+.brand{font-family:var(--serif);font-size:1.15rem;font-weight:600;text-decoration:none;line-height:1.3}
+.brand span{display:block;font-family:var(--sans);font-size:.72rem;font-weight:500;
+  letter-spacing:.11em;text-transform:uppercase;color:#B9C6D6;margin-top:.15rem}
+.brand:hover,.brand:focus{text-decoration:none}
+
+.site-nav ul{display:flex;flex-wrap:wrap;gap:.15rem .35rem;list-style:none;margin:0;padding:0}
+.site-nav a{
+  display:block;padding:.55rem .8rem;border-radius:4px;text-decoration:none;
+  font-size:.95rem;color:#DCE4EE;
+}
+.site-nav a:hover,.site-nav a:focus{background:rgba(255,255,255,.12);color:#fff}
+.site-nav a[aria-current="page"]{color:#fff;font-weight:600;box-shadow:inset 0 -2px 0 var(--accent-bright)}
+
+/* --- Page header band ---------------------------------------------------- */
+.page-head{background:var(--sand);border-bottom:1px solid var(--line);padding:2.75rem 0 2.25rem;margin-bottom:2.5rem}
+.page-head h1{margin-bottom:.35rem}
+.page-head p{color:var(--muted);max-width:60ch;margin-bottom:0;font-size:1.05rem}
+
+.meta-line{color:var(--muted);font-size:.98rem;margin-top:-.35rem}
+
+/* --- Home hero ----------------------------------------------------------- */
+.hero{background:var(--sand);border-bottom:1px solid var(--line);padding:3.25rem 0 3rem}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:2.5rem 3rem;align-items:center}
+.hero h1{margin-bottom:.15rem}
+.hero .role{font-family:var(--serif);font-size:1.2rem;color:var(--accent);margin:0 0 .2rem}
+.hero .affil{color:var(--muted);font-size:1rem;margin-bottom:1.4rem}
+.hero .intro{font-size:1.09rem;max-width:56ch}
+.portrait{
+  width:250px;height:250px;border-radius:50%;object-fit:cover;display:block;
+  border:5px solid #fff;box-shadow:0 6px 28px rgba(16,36,63,.18);
+}
+
+/* --- Credentials strip --------------------------------------------------- */
+.credentials{background:var(--navy);color:#fff;padding:2rem 0}
+.credentials ul{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;
+  list-style:none;margin:0;padding:0;text-align:center;
+}
+.credentials li+li{border-left:1px solid rgba(255,255,255,.18)}
+.credentials .num{display:block;font-family:var(--serif);font-size:1.6rem;color:#fff;line-height:1.2}
+.credentials .lbl{display:block;font-size:.85rem;color:#B9C6D6;margin-top:.3rem;line-height:1.45}
+
+/* --- Buttons ------------------------------------------------------------- */
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.75rem 0 0}
+.btn{
+  display:inline-block;padding:.7rem 1.4rem;border-radius:4px;text-decoration:none;
+  font-size:.97rem;font-weight:600;border:1.5px solid var(--navy);
+  background:var(--navy);color:#fff;transition:background .15s,color .15s;
+}
+.btn:hover,.btn:focus{background:var(--navy-soft);border-color:var(--navy-soft);color:#fff;text-decoration:none}
+.btn-outline{background:transparent;color:var(--navy);border-color:#BCA98F}
+.btn-outline:hover,.btn-outline:focus{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* --- Cards --------------------------------------------------------------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.5rem 1.5rem 1.35rem}
+.card h3{margin-top:0;font-size:1.08rem;color:var(--navy)}
+.card p{margin-bottom:0;font-size:.97rem;color:var(--muted)}
+
+/* --- Definition-style timeline (education, positions) -------------------- */
+.entries{margin:1.25rem 0 0}
+.entry{
+  display:grid;grid-template-columns:150px minmax(0,1fr);gap:.4rem 2rem;
+  padding:1.15rem 0;border-top:1px solid var(--line);
+}
+.entry:last-child{border-bottom:1px solid var(--line)}
+.entry .when{font-size:.88rem;font-weight:700;color:var(--accent);letter-spacing:.03em;padding-top:.15rem}
+.entry .what > :last-child{margin-bottom:0}
+.entry .org{font-family:var(--serif);font-size:1.08rem;color:var(--navy);font-weight:600;margin:0 0 .2rem}
+.entry .detail{margin:0 0 .35rem}
+.entry .sub{color:var(--muted);font-size:.94rem;margin:0}
+
+/* --- Plain lists --------------------------------------------------------- */
+.tick{list-style:none;padding:0;margin:1rem 0}
+.tick li{position:relative;padding:.5rem 0 .5rem 1.6rem;border-bottom:1px solid var(--line)}
+.tick li::before{content:"";position:absolute;left:.25rem;top:1.15rem;width:6px;height:6px;
+  border-radius:50%;background:var(--accent-bright)}
+.tick li:last-child{border-bottom:0}
+
+.plain{padding-left:1.2rem;margin:1rem 0}
+.plain li{margin-bottom:.5rem}
+
+.two-col{columns:2;column-gap:2.5rem}
+.two-col li{break-inside:avoid}
+
+/* --- Publications -------------------------------------------------------- */
+.year-head{
+  font-family:var(--serif);font-size:1.35rem;color:var(--navy);margin:2.5rem 0 .25rem;
+  padding-bottom:.4rem;border-bottom:2px solid var(--line);
+}
+ol.pubs{list-style:none;counter-reset:none;margin:0;padding:0}
+ol.pubs li{
+  padding:1rem 0 1rem 0;border-bottom:1px solid var(--line);font-size:.99rem;line-height:1.6;
+}
+ol.pubs li:last-child{border-bottom:0}
+.pub-meta{display:block;margin-top:.35rem;font-size:.85rem;color:var(--muted)}
+.tag{
+  display:inline-block;background:var(--sand);border:1px solid var(--line);color:var(--muted);
+  font-size:.75rem;letter-spacing:.04em;padding:.12rem .5rem;border-radius:3px;margin-right:.35rem;
+}
+.doi{white-space:nowrap}
+
+/* --- Callout ------------------------------------------------------------- */
+.callout{
+  background:var(--sand);border-left:4px solid var(--accent-bright);
+  padding:1.35rem 1.5rem;border-radius:0 5px 5px 0;margin:2rem 0;
+}
+.callout > :last-child{margin-bottom:0}
+.callout h3{margin-top:0}
+
+/* --- Stats row (funding) ------------------------------------------------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.25rem;margin:1.5rem 0 2rem}
+.stat{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.25rem}
+.stat .v{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--navy)}
+.stat .k{display:block;font-size:.85rem;color:var(--muted);margin-top:.25rem}
+
+/* --- Contact ------------------------------------------------------------- */
+.contact-list{list-style:none;padding:0;margin:1.5rem 0}
+.contact-list li{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.contact-list .k{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--muted);font-weight:700;margin-bottom:.25rem}
+.contact-list .v{font-size:1.05rem;word-break:break-word}
+
+/* --- Footer -------------------------------------------------------------- */
+.site-footer{background:var(--navy);color:#C3CEDC;padding:2.5rem 0;font-size:.92rem;margin-top:auto}
+.site-footer a{color:#fff}
+.footer-inner{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;justify-content:space-between;align-items:flex-start}
+.site-footer p{margin:0 0 .4rem}
+.site-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem 1.25rem}
+.site-footer .fine{color:#8FA0B4;font-size:.85rem;margin-top:1.25rem}
+
+html,body{min-height:100%}
+body{display:flex;flex-direction:column}
+main{flex:1 0 auto}
+
+/* --- Responsive ---------------------------------------------------------- */
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;text-align:left}
+  .portrait{width:180px;height:180px;order:-1}
+  .credentials ul{grid-template-columns:repeat(2,1fr);gap:1.25rem}
+  .credentials li:nth-child(odd){border-left:0}
+  .credentials li:nth-child(3),.credentials li:nth-child(4){
+    border-top:1px solid rgba(255,255,255,.18);padding-top:1.25rem}
+  .two-col{columns:1}
+}
+@media (max-width:620px){
+  body{font-size:1rem}
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .site-nav ul{gap:.1rem .2rem;margin-left:-.8rem}
+  .entry{grid-template-columns:1fr;gap:.25rem}
+  .entry .when{padding-top:0}
+  .credentials ul{grid-template-columns:1fr;text-align:left}
+  .credentials li{border-left:0!important;border-top:1px solid rgba(255,255,255,.18);padding-top:1rem}
+  .credentials li:first-child{border-top:0;padding-top:0}
+  .btn{width:100%;text-align:center}
+}
+
+/* --- Print --------------------------------------------------------------- */
+@media print{
+  .site-header,.site-footer,.btn-row,.skip-link{display:none}
+  body{background:#fff;font-size:11pt}
+  a{color:#000;text-decoration:none}
+}
