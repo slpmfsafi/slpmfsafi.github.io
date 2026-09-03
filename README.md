@@ -14,6 +14,8 @@ Live at <https://slpmfsafi.github.io/>
 | `research.html` | Research interests, funding, and the full publication list |
 | `teaching.html` | Courses taught, supervision, teaching awards |
 | `consulting.html` | Consulting and clinical services |
+| `photos.html` | Lab and academic photo gallery |
+| `photos/` | Web-sized images used by the gallery |
 | `contact.html` | Email addresses, profiles, CV download |
 | `assets/style.css` | The single stylesheet shared by every page |
 | `assets/headshot.jpg` | Optimized photo used on the site |
