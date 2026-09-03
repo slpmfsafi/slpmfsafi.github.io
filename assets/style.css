@@ -201,6 +201,15 @@ ol.pubs li:last-child{border-bottom:0}
 .fig figcaption strong{color:var(--navy)}
 .fig-credit{font-size:.82rem;color:var(--muted);margin:0 0 2.25rem}
 
+
+/* --- Video --------------------------------------------------------------- */
+.video-wrap{max-width:848px;margin:1.5rem 0 .75rem}
+.video-wrap video{
+  width:100%;height:auto;aspect-ratio:848/480;display:block;background:#000;
+  border:1px solid var(--line);border-radius:6px;
+}
+.video-note{font-size:.9rem;color:var(--muted);margin:0 0 2.5rem}
+
 /* --- Callout ------------------------------------------------------------- */
 .callout{
   background:var(--sand);border-left:4px solid var(--accent-bright);
