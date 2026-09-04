@@ -27,3 +27,11 @@ Live at <https://slpmfsafi.github.io/>
 
 The site is plain HTML and CSS. There is no build step: editing a file and
 saving it is all that is needed, and GitHub Pages publishes it automatically.
+
+## Updating the News & updates list
+
+The home page shows the three most recent items in the "News & updates"
+section of `index.html`, newest first. To add one: insert a new entry at the
+top of that list and remove the last one. When more than three items have
+accumulated, the older ones move to an archive page, `news.html`, and a
+"See all news" link is added under the list on the home page.
