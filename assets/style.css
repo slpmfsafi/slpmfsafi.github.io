@@ -93,14 +93,14 @@ section{margin-bottom:1rem}
 .meta-line{color:var(--muted);font-size:.98rem;margin-top:-.35rem}
 
 /* --- Home hero ----------------------------------------------------------- */
-.hero{background:linear-gradient(180deg,#F6EADA 0%,var(--sand) 100%);border-bottom:1px solid var(--line);padding:3.25rem 0 3rem}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:2.5rem 3rem;align-items:center}
+.hero{background:linear-gradient(180deg,#F6EADA 0%,var(--sand) 100%);border-bottom:1px solid var(--line);padding:2.75rem 0 2.5rem}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:2rem 3rem;align-items:center}
 .hero h1{margin-bottom:.15rem}
 .hero .role{font-family:var(--serif);font-size:1.2rem;color:var(--accent);margin:0 0 .2rem}
 .hero .affil{color:var(--muted);font-size:1rem;margin-bottom:1.4rem}
-.hero .intro{font-size:1.09rem;max-width:56ch}
+.hero .intro{font-size:1.09rem;max-width:66ch}
 .portrait{
-  width:250px;height:250px;border-radius:50%;object-fit:cover;display:block;
+  width:290px;height:290px;border-radius:50%;object-fit:cover;display:block;
   border:5px solid var(--cream);box-shadow:0 0 0 2px var(--accent-bright),0 8px 28px rgba(70,45,20,.18);
 }
 
