@@ -158,6 +158,50 @@ section{margin-bottom:1rem}
 .two-col{columns:2;column-gap:2.5rem}
 .two-col li{break-inside:avoid}
 
+
+/* --- Selected publications (journal tiles) ------------------------------ */
+.selected{margin:1.5rem 0 1rem}
+.pub-card{
+  display:grid;grid-template-columns:172px minmax(0,1fr);gap:1rem 2rem;align-items:start;
+  padding:1.6rem 0;border-top:1px solid var(--line);
+}
+.pub-card:last-of-type{border-bottom:1px solid var(--line)}
+.tile-wrap{padding:.6rem .4rem .2rem;display:flex;justify-content:center}
+.tile{
+  position:relative;width:150px;min-height:112px;padding:1.1rem .9rem .8rem;
+  background:var(--navy);color:var(--parchment);border-top:4px solid var(--accent-bright);
+  border-radius:3px;box-shadow:0 10px 22px rgba(43,41,36,.22),0 2px 4px rgba(43,41,36,.15);
+  transform:rotate(-2.2deg);transition:transform .2s ease;
+}
+.pub-card:nth-of-type(even) .tile{transform:rotate(1.6deg)}
+.pub-card:hover .tile{transform:rotate(0deg)}
+.tile::before{ /* the pin */
+  content:"";position:absolute;top:-9px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#E6C48F,var(--accent) 65%);box-shadow:0 2px 4px rgba(0,0,0,.35);
+}
+.tile .jname{display:block;font-family:var(--serif);font-size:.86rem;line-height:1.25;color:#fff;font-weight:600}
+.tile .jmeta{display:block;margin-top:.55rem;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--parchment)}
+.tile .jmeta b{font-weight:700;color:#fff}
+.pub-body .line-label{
+  display:block;font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem
+}
+.pub-body .cite{margin:0 0 .6rem;font-size:.97rem;line-height:1.55}
+.pub-body .finding{margin:0 0 .85rem;color:var(--ink)}
+.pub-body .finding::before{content:"";display:inline-block;width:1.6rem;height:3px;background:var(--accent-bright);margin:0 .6rem .25rem 0;border-radius:2px}
+.doi-btn{
+  display:inline-block;font-size:.83rem;font-weight:600;padding:.38rem .85rem;border-radius:4px;
+  border:1.5px solid var(--accent-bright);color:var(--accent);text-decoration:none;
+}
+.doi-btn:hover,.doi-btn:focus{background:var(--accent);color:#fff;border-color:var(--accent);text-decoration:none}
+.selected-note{color:var(--muted);font-size:.95rem;margin:1.25rem 0 0}
+@media (max-width:620px){
+  .pub-card{grid-template-columns:1fr;gap:.75rem}
+  .tile-wrap{justify-content:flex-start;padding-left:.6rem}
+  .tile{transform:rotate(-1.5deg)}
+  .pub-card:nth-of-type(even) .tile{transform:rotate(1deg)}
+}
+@media (prefers-reduced-motion:reduce){ .tile{transition:none} }
+
 /* --- Publications -------------------------------------------------------- */
 .year-head{
   font-family:var(--serif);font-size:1.35rem;color:var(--navy);margin:2.5rem 0 .25rem;
