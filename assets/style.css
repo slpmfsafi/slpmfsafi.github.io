@@ -327,10 +327,9 @@ main{flex:1 0 auto}
 
 /* --- Print --------------------------------------------------------------- */
 /* --- Previous students (site thumbnails) -------------------------------- */
-.student-head{display:flex;align-items:center;gap:1rem;margin:0 0 .5rem}
-.student-head .org{margin:0}
+.entry .when .thumb{margin-top:.6rem}
 .thumb{
-  flex:none;display:block;width:128px;height:80px;border-radius:4px;overflow:hidden;
+  display:block;width:128px;height:80px;border-radius:4px;overflow:hidden;
   border:1px solid var(--line);background:var(--card);
   box-shadow:0 3px 10px rgba(43,41,36,.14);transition:transform .15s ease,box-shadow .15s ease;
 }
@@ -338,7 +337,7 @@ main{flex:1 0 auto}
 .thumb:hover,.thumb:focus{transform:translateY(-2px);box-shadow:0 6px 16px rgba(43,41,36,.22)}
 .entry .thesis{margin:0 0 .35rem;font-size:.95rem;color:var(--muted);font-style:italic}
 .entry .sub + .sub{margin-top:.3rem}
-@media (max-width:620px){ .thumb{width:104px;height:65px} }
+@media (max-width:620px){ .entry .when .thumb{margin:.4rem 0 .35rem} }
 @media (prefers-reduced-motion:reduce){ .thumb{transition:none} }
 
 @media print{
