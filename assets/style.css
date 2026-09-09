@@ -69,8 +69,16 @@ section{margin-bottom:1rem}
 .site-header{background:var(--navy);color:#fff;border-bottom:3px solid var(--accent-bright)}
 .site-header a{color:#fff}
 .header-inner{padding-top:1.15rem;padding-bottom:.35rem}
-.brand{display:block;text-decoration:none;margin-bottom:.85rem;max-width:70ch}
+.brand{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:1.25rem;
+  text-decoration:none;margin-bottom:.85rem}
 .brand:hover,.brand:focus{text-decoration:none}
+.brand-name,.brand-role{max-width:70ch}
+.brand-photo{
+  grid-column:2;grid-row:1/3;width:62px;height:62px;border-radius:50%;object-fit:cover;
+  border:2px solid var(--cream);box-shadow:0 0 0 2px var(--accent-bright),0 4px 12px rgba(0,0,0,.35);
+  transition:transform .2s ease;
+}
+.brand:hover .brand-photo,.brand:focus .brand-photo{transform:scale(1.05)}
 .brand-name{display:block;font-family:var(--serif);font-weight:600;line-height:1.25;
   font-size:clamp(1.02rem,2.3vw,1.3rem);letter-spacing:.005em}
 .brand-role{display:block;font-family:var(--sans);font-size:.79rem;font-weight:500;
@@ -317,6 +325,8 @@ main{flex:1 0 auto}
 @media (max-width:620px){
   body{font-size:1rem}
   .site-nav ul{gap:.1rem .2rem;margin-left:-.8rem}
+  .brand{column-gap:.9rem}
+  .brand-photo{width:50px;height:50px}
   .entry{grid-template-columns:1fr;gap:.25rem}
   .entry .when{padding-top:0}
   .credentials ul{grid-template-columns:1fr;text-align:left}
@@ -338,7 +348,7 @@ main{flex:1 0 auto}
 .entry .thesis{margin:0 0 .35rem;font-size:.95rem;color:var(--muted);font-style:italic}
 .entry .sub + .sub{margin-top:.3rem}
 @media (max-width:620px){ .entry .when .thumb{margin:.4rem 0 .35rem} }
-@media (prefers-reduced-motion:reduce){ .thumb{transition:none} }
+@media (prefers-reduced-motion:reduce){ .thumb,.brand-photo{transition:none} }
 
 @media print{
   .site-header,.site-footer,.btn-row,.skip-link{display:none}
