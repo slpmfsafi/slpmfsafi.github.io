@@ -257,6 +257,7 @@ ol.pubs li:last-child{border-bottom:0}
 .figures.devices .fig img{height:220px;object-fit:contain}
 .fig figcaption{font-size:.92rem;color:var(--muted);line-height:1.5;margin-top:.65rem}
 .fig figcaption strong{color:var(--navy)}
+.fig figcaption a{display:inline;background:none;border:0;border-radius:0;padding:0;line-height:inherit;box-shadow:none;white-space:nowrap}
 .fig-credit{font-size:.82rem;color:var(--muted);margin:0 0 2.25rem}
 
 
