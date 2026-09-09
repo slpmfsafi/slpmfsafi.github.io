@@ -14,7 +14,6 @@ Live at <https://slpmfsafi.github.io/>
 | `research.html` | Research interests, funding, and the full publication list |
 | `lab.html` | The Neuroscience of Education Research Lab (a sub-page of Research) |
 | `teaching.html` | Courses taught, supervision, teaching awards |
-| `students.html` | Links to students' own portfolio pages |
 | `consulting.html` | Consulting and clinical services |
 | `photos.html` | Lab and academic photo gallery |
 | `photos/` | Web-sized images used by the gallery, plus the lab video and its poster frame |
