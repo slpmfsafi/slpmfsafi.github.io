@@ -20,6 +20,7 @@ Live at <https://slpmfsafi.github.io/>
 | `contact.html` | Email addresses, profiles, CV download |
 | `assets/style.css` | The single stylesheet shared by every page |
 | `assets/headshot.jpg` | Optimized photo used on the site |
+| `assets/students/` | Small preview images (480×300) shown beside each student on the Teaching page. To replace one, upload a screenshot of the student’s site with the same file name. |
 | `Mohammed-F-Safi-CV.pdf` | Public CV offered for download |
 | `cv.docx` | Source CV that the website content is drawn from |
 | `sitemap.xml`, `robots.txt` | Help search engines index the site |
